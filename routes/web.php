@@ -18,8 +18,10 @@ use App\Http\Controllers\VehiclesController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/home', [AdminsController::class,'homepage']);
 
 Route::get('/clientlogin',[ClientsController::class,'login']);
 Route::get('/registration',[ClientsController::class,'registration']);
